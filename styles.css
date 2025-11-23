@@ -41,6 +41,11 @@ body {
     background-color: var(--yellow);
 }
 
+a {
+    color: unset;
+    text-decoration: none;
+}
+
 @media (max-width: 767px) {
     :root {
         --font-sm: 0.75rem;
@@ -100,13 +105,14 @@ div.card-detail>p {
     font-size: var(--font-md);
 }
 
-div.card-detail>h3 {
+div.card-detail a {
     font-size: var(--font-lg);
     font-weight: 800;
     transition: color 200ms ease-in-out;
 }
 
-div.card-detail>h3:hover {
+div.card-detail a:hover,
+div.card-detail a:focus {
     color: var(--yellow);
     cursor: pointer;
 }
