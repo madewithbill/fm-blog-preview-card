@@ -27,7 +27,7 @@
 html {
     color: var(--gray-950);
     font-family: var(--primary-font);
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
     font-weight: 400;
     line-height: 150%;
 }
@@ -95,6 +95,11 @@ div.card-detail>span {
     border-radius: 0.25rem;
 }
 
+div.card-detail>span,
+div.card-detail>time {
+    font-size: var(--font-sm);
+}
+
 div.card-detail>time,
 div.card-detail>p {
     font-weight: 500;
@@ -105,13 +110,13 @@ div.card-detail>p {
     font-size: var(--font-md);
 }
 
-div.card-detail a {
+div.card-detail h3 {
     font-size: var(--font-lg);
     font-weight: 800;
     transition: color 200ms ease-in-out;
 }
 
-div.card-detail a:hover,
+div.card-detail h3:hover,
 div.card-detail a:focus {
     color: var(--yellow);
     cursor: pointer;
@@ -121,5 +126,6 @@ article>footer {
     display: flex;
     align-items: center;
     gap: var(--spacing-150);
+    font-size: var(--font-sm);
     font-weight: 800;
 }
