@@ -1,0 +1,119 @@
+/* Base Styles */
+@font-face {
+    font-family: 'Figtree';
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Figtree Italic';
+    src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary-font: 'Figtree', system-ui, sans-serif;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.5rem;
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-300: 1.5rem;
+}
+
+html {
+    color: var(--gray-950);
+    font-family: var(--primary-font);
+    font-size: var(--font-sm);
+    font-weight: 400;
+    line-height: 150%;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100dvh;
+    padding: var(--spacing-300);
+    display: flex;
+    background-color: var(--yellow);
+}
+
+@media (max-width: 767px) {
+    :root {
+        --font-sm: 0.75rem;
+        --font-md: 0.875rem;
+        --font-lg: 1.25rem;
+    }
+}
+
+/* Card styles */
+
+article {
+    background-color: var(--white);
+    max-width: 24rem;
+    padding: var(--spacing-300);
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 1.25rem;
+    box-shadow: 0.5rem 0.5rem black;
+}
+
+article>img {
+    display: block;
+    width: 100%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+article p,
+article h3 {
+    margin: 0;
+}
+
+div.card-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacing-150);
+    margin-block: var(--spacing-300)
+}
+
+div.card-detail>span {
+    display: inline-block;
+    font-weight: 800;
+    background-color: var(--yellow);
+    padding: var(--spacing-50) var(--spacing-150);
+    border-radius: 0.25rem;
+}
+
+div.card-detail>time,
+div.card-detail>p {
+    font-weight: 500;
+}
+
+div.card-detail>p {
+    color: var(--gray-500);
+    font-size: var(--font-md);
+}
+
+div.card-detail>h3 {
+    font-size: var(--font-lg);
+    font-weight: 800;
+    transition: color 200ms ease-in-out;
+}
+
+div.card-detail>h3:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+article>footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+    font-weight: 800;
+}
